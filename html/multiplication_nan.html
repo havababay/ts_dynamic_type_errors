@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Type Error Example</title>
+</head>
+<body>
+    <div id="myDiv"></div>
+    <div id="myDiv2"></div>
+
+    <script>
+        // This JavaScript code will compile without errors
+        // but will throw a dynamic type error at runtime
+        try {
+            // Attempt to add a string and a number
+            const num = 42;
+            const str = "Hello";
+            const result = num * str;
+            document.getElementById("myDiv").textContent = "Result: " + result;
+            const result2 = Math.sqrt("hava");
+            document.getElementById("myDiv2").textContent = "Result2: " + result2;
+        } catch (error) {
+            // Handle the error
+            document.getElementById("myDiv").textContent = "Error: " + error.message;
+        }
+    </script>
+</body>
+</html>
