@@ -6,16 +6,16 @@
     <title>Dynamic Type Multiplication Error Example</title>
 </head>
 <body>
-    <div>Dynamic Type Multiplication Error Example</div>
+    <div>Dynamic Type Addition Error Example</div>
     <br />
-    <div>Statement: 42 * "Hello"</div>
+    <div>Statement: 42 + "10"</div>
     <div id="result"></div>
 
     <script>
         try {
             const num = 42;
-            const str = "Hello";
-            const result = num * str;
+            const str = "10";
+            const result = num + str;
             document.getElementById("result").textContent = "Result: " + result;
         } catch (error) {
             // Handle the error

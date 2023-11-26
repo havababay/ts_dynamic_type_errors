@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Type Error Example</title>
+    <title>Dynamic Type SQRT Error Example</title>
 </head>
 <body>
-    <div id="myDiv"></div>
-    <div id="myDiv2"></div>
+    <div>Dynamic Type SQRT Error Example</div>
+    <br />
+    <div>Statement: sqrt("Hello")</div>
+    <div id="result"></div>
 
     <script>
-        // This JavaScript code will compile without errors
-        // but will throw a dynamic type error at runtime
         try {
-            // Attempt to add a string and a number
-            const num = 42;
-            const str = "Hello";
-            const result = num * str;
-            document.getElementById("myDiv").textContent = "Result: " + result;
-            const result2 = Math.sqrt("hava");
-            document.getElementById("myDiv2").textContent = "Result2: " + result2;
+            let num = 42;
+            num = "Hello";
+            const result = Math.sqrt(num);
+            document.getElementById("result").textContent = "Result: " + result;
         } catch (error) {
             // Handle the error
-            document.getElementById("myDiv").textContent = "Error: " + error.message;
+            document.getElementById("result").textContent = "Error: " + error.message;
         }
     </script>
 </body>
