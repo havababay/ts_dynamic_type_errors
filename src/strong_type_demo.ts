@@ -29,3 +29,9 @@ let num = 42;
 num = "Hello";
 const result = Math.sqrt(num);
 */
+
+function add(a: number, b = 10) : number{
+    return a + b;
+}
+
+add(1, "a");
